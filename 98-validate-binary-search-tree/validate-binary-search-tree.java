@@ -29,7 +29,8 @@
  */
 class Solution {
     public boolean isValidBST(TreeNode root) {
-        return isValidBSTHelper(root, Long.MIN_VALUE, Long.MAX_VALUE);
+        Long min=Long.MIN_VALUE, max = Long.MAX_VALUE;
+        return isValidBSTHelper(root, min, max);
     }
 
     private boolean isValidBSTHelper(TreeNode root, long min, long max) {
