@@ -1,7 +1,12 @@
 class Solution {
     public int minDays(int[] bloomDay, int m, int k) {
-        int low = 0;
-        int high = 0;
+        // Not enough flowers overall
+        if ((long) m * k > bloomDay.length) {
+            return -1;
+        }
+
+        int low = Integer.MAX_VALUE;
+        int high = Integer.MIN_VALUE;
 
         for(int b : bloomDay){
             low = Math.min(low,b);
